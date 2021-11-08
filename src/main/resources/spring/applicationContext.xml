@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <!--    以上约束文件，增加了事务支持tx-->
+    <!--    1 扫描注解-->
+    <context:component-scan base-package="com.wtu"></context:component-scan>
+    <!--    2 加载数据库四要素配置-->
+    <context:property-placeholder location="classpath:mybatis/db/db.properties"/>
+    <!--    3 数据库配置-->
+    <bean id="mystore" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!--        按照顺序 连接数据库-->
+        <property name="driverClass" value="${driver}"/>
+        <property name="jdbcUrl" value="${url}"/>
+        <property name="user" value="${user}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+    <!--    4 sqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--        4.1 引入数据源-->
+        <property name="dataSource" ref="mystore"/>
+        <!--        4.2 配置别名-->
+        <property name="typeAliasesPackage" value="com.wtu.entity"/>
+        <!--        4.3 扫描mapper映射文件-->
+        <property name="mapperLocations" value="classpath*:mapper/*.xml"/>
+        <!--        4.4 配置mybatis文件  分页功能 需要配置-->
+        <property name="configLocation" value="classpath:mybatis/sqlMapConfig.xml"/>
+    </bean>
+    <!--    5 扫描接口和session工厂-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--        5.1 接口路径-->
+        <property name="basePackage" value="com.wtu.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+
+</beans>

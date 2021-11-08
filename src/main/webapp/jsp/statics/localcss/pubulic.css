@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+}
+.clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+/*管理页面头部*/
+.admin_head{
+    width: 100%;
+    min-height: 48px;
+    background-color: #5bc0de;
+}
+.admin_head>h1{
+    float: left;
+    color: #fff;
+    font-size: 22px;
+    padding-left:80px;
+    text-shadow: 2px 1px #000;
+    line-height: 48px;
+}
+.admin_headR{
+    float: right;
+    color: #fff;
+    margin-right: 50px;
+}
+.admin_headR>p{
+    display: inline-block;
+    font-weight: bold;
+    line-height: 48px;
+}
+.admin_headR>a{
+    width: 50px;
+    height: 28px;
+    display: inline-block;
+    border: 1px solid #679e43;
+    background: linear-gradient(to bottom,#baf076,#a2d866,#9cd055,#8dc838,#8bc93a);
+    line-height: 28px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+
+}
+.admin_headR a:hover,.admin_headR a:active{
+    border: 1px solid #192b02;
+    border-radius: 4px;
+    font-weight: bold;
+    background: linear-gradient(to bottom,#70b21c,#5c9613,#47740e,#3b6209,#2b4906);
+}
+/*共用的主体内容*/
+.admin_main{
+    border-top: 1px solid #c2ccd5;
+    display: flex;  /*变为弹性盒模型*/
+    display: -webkit-flex;
+    background: #F6FAFD;
+}
+/*侧边导航*/
+.left_nav{
+    width: 168px;
+    margin-right: 10px;
+    /*height: 520px;*/
+    min-height: 1000px;
+    background-color: #F5F5F5;
+}
+.leftH2{
+    width: 140px;
+    height: 30px;
+    border-radius: 4px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background: #60b3e7;
+    margin: 10px  auto;
+    box-shadow:4px 4px rgba(212,212,212,0.7);
+}
+.list{
+    margin: 0 20px;
+    font-weight: bold;
+}
+.list li{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid rgba(212,212,212,0.5) ;
+}
+.list li:hover{
+    background-color: #acd5f5;
+    border-radius: 4px;
+}
+.list li:active, #active{
+    background-color: #92c609;
+    border-radius: 4px;
+}
+.list a{
+    color: #0042a8;
+    display: inline-block;
+    padding-left: 40px;
+    width: 90%;
+}
+/*搜索信息栏*/
+.search{
+    height:50px;
+    line-height:50px;
+    background: #f6fafd;
+    padding-left: 24px;
+    color: #000;
+}
+.search input[type='text']{
+    width: 200px;
+    height: 30px;
+    outline: none;
+    padding-left: 10px;
+    border: 1px solid #8ab2d5;
+    border-radius: 4px;
+}
+.search input[type='button']{
+    margin-left: 20px;
+    width: 100px;
+    padding: 0 20px;
+    height: 30px;
+    border: 1px solid #7ba92c;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+}
+.search input[type='button']:focus{
+    outline: none;
+    background-color: #5d8410;
+}
+.search a{
+    width: 80px;
+    padding-left:40px;
+    float: right;
+    margin: 10px 60px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #0c89de;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    background-color:#47ACF1;
+}
+.search a:hover,.search a:active{
+    background-color: #0778c5;
+}
+/*搜索按钮*/
+.searchbutton{
+    margin-left: 20px;
+    width: 100px;
+    padding: 0 20px;
+    height: 30px;
+    border: 1px solid #7ba92c;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to bottom,#baf076,#a2d866,#9cd055,#8dc838,#8bc93a);
+
+}
+.searchbutton:hover{
+    outline: none;
+    background: linear-gradient(to bottom,#70b21c,#5c9613,#47740e,#3b6209,#2b4906);
+
+}
+
+/*内容右边*/
+.admin_right{
+    width: 85%;
+    min-height: 1000px;
+    min-width: 1200px;
+    position: relative;
+    background-color: #FFFFFF;
+}
+/*用户信息管理页面*/
+.providerTable {
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.providerTable tr {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.providerTable tr:nth-child(odd) {
+    background: #f6f7f9;
+}
+
+.providerTable tr:hover {
+    background: #e9f9ca;
+}
+
+.firstTr {
+    border: 1px solid #d6dfe6;
+    background: linear-gradient(to bottom, #f3f8fc, #ebf4f9, #e3f1fa, #e0f0fd, #d8e9fd);
+}
+
+.firstTr th {
+    border-right: 2px solid rgba(209, 218, 223, 0.4);
+}
+.providerTable td{
+    max-height: 80px;
+    overflow: hidden;
+}
+.providerTable td a {
+    margin-top: 10px;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+#limit_td{
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.operation{
+    text-align: center;
+}
+.operation>span>a{
+    color: #000000;
+    line-height: 42px;
+    letter-spacing: 1px;
+}
+.operation>span>a:hover{
+    color: #999999;
+}
+/*分页*/
+.fenye{
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.fenyeLeft{
+    width: 40%;
+    display: inline-block;
+
+}
+.fenyeR{
+    width: 50%;
+    float: right;
+    display: inline-block;
+    text-align: right;
+}
+.fenyeR>a:nth-of-type(4){
+    margin-right: 20px;
+}
+.fenyeR>a{
+    display: inline-block;
+    padding: 8px 10px;
+    background: linear-gradient(to bottom,#baf076,#a2d866,#9cd055,#8dc838,#8bc93a);
+    border: 1px solid #679e43;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+.fenyeR>a:hover,.fenyeR>a:active{
+    border: 1px solid #192b02;
+    border-radius: 4px;
+    font-weight: bold;
+    background: linear-gradient(to bottom,#70b21c,#5c9613,#47740e,#3b6209,#2b4906);
+}
+/*底部*/
+.footer{
+    width: 100%;
+    min-height: 150px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #66afe9;
+}
+
+/*修改用户信息的input*/
+.admin_right>form{
+    text-align: center;
+}
+.admin_right>form table tr td input{
+    width: 80%;
+    margin: 8px 0;
+    min-height: 32px;
+}
+.confirm_btn{
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+    padding: 8px 10px;
+    background: linear-gradient(to bottom,#baf076,#a2d866,#9cd055,#8dc838,#8bc93a);
+    border: 1px solid #679e43;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+.confirm_btn:hover{
+    border: 1px solid #192b02;
+    border-radius: 4px;
+    font-weight: bold;
+    background: linear-gradient(to bottom,#70b21c,#5c9613,#47740e,#3b6209,#2b4906);
+}
+
+/*管理员删除用户的样式*/
+#deleteUser:hover{
+    color: red;
+}
+
+#fileForm{
+    position: relative;
+
+}

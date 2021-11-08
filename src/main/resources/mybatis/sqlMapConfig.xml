@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--   配置别名 -->
+    <!--    数据库四要素文件-->
+    <!--    数据库环境-->
+    <!--    关联mapper-->
+
+    <!--    启用分页支持-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor">
+            <!--            分页合理化操作:首页 上一页 下一页 尾页 点击超过第一页 或最后一页  自行判断-->
+            <property name="reasonable" value="true"/>
+            <!--            配置数据库服务器类型：mysql,oracal等-->
+            <property name="helperDialect" value="mysql"/>
+
+        </plugin>
+    </plugins>
+
+
+</configuration>

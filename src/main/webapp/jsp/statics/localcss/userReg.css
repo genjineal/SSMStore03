@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#loginBody{
+    background: linear-gradient(to bottom,#62B1F4,#429BEB,#217CC5,#196AAB);
+}
+/*注册的样式*/
+.reg{
+    text-align: left;
+    display: block;
+    width: 600px;
+    margin:0 auto;
+    background-color: #FFFFFF;
+    position: relative;
+    top: 200px;
+    border-radius: 5px;
+}
+.reg_form{
+    text-align: center;
+    position: relative;
+
+}
+.reg_form>form{
+    top: 40px;
+    padding: 30px 0;
+}
+.reg_form>form>span{
+    display: inline-block;
+
+}
+.reg_form>form>input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+    width: 180px;
+    margin: 5px 0 5px 6px;
+    height: 32px;
+}
+.reg_btn{
+    width: 240px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    padding: 8px 0;
+    color: #A4A4A4;
+    background-color: #E5E5E5;
+}
+.reg_btn:hover{
+    transition: .5s;
+    background: #999999;
+    color: #FFFFFF;
+}
+
+.error{
+    display: inline-block;
+    width: 100px;
+    position: absolute;
+    top: 30px;
+    color: red;
+}
+
+.logo{
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    width: 160px;
+    padding: 10px 0;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: "Arial Black";
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #196AAB;
+    background-color: #3498E9;
+    position: absolute;
+    left: 220px;
+    top: -36px;
+    z-index: 2;
+}
+.goLogin{
+    position: absolute;
+    right: 10px;
+}

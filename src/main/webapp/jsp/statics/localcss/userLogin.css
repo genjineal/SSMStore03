@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#loginBody{
+    background: linear-gradient(to bottom,#62B1F4,#429BEB,#217CC5,#196AAB);
+}
+/*登录的样式*/
+.login{
+    text-align: center;
+    display: block;
+    width: 460px;
+    margin:0 auto;
+    border-radius: 5px;
+    position: relative;
+    top: 200px;
+    background-color: #FFFFFF;
+}
+.login_form{
+    position: relative;
+    overflow: hidden;
+}
+.logo{
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 2px;
+    width: 160px;
+    padding: 10px 0;
+    font-size: 20px;
+    border-radius: 5px;
+    font-family: "Arial Black";
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #196AAB;
+    background-color: #3498E9;
+    position: absolute;
+    top: -36px;
+    left: 150px;
+    z-index: 1;
+}
+.login_form>form>span{
+    width: 58px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.login_form>form>input:nth-of-type(1),input:nth-of-type(2){
+    margin: 10px 0;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+    outline: none;
+}
+.login_form>form>input:nth-of-type(3){
+    width: 80px;
+    margin: 5px 0 5px 6px;
+    height: 32px;
+    border: none;
+    border-bottom: 1px solid #E5E5E5;
+    outline: none;
+
+}
+
+.login_btn{
+    width: 240px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    padding: 8px 0;
+    color: #A4A4A4;
+    background-color: #E5E5E5;
+}
+.login_btn:hover{
+    transition: .5s;
+    background: #999999;
+    color: #FFFFFF;
+}
